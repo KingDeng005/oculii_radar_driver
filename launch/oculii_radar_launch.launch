@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node
+        pkg = "oculii_radar_driver"
+        type = "oculii_radar_driver_node.py"
+        name = "oculii_radar_driver_node"
+    />
+</launch>
