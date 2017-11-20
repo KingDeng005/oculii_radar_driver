@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#Created by Fuheng on 7/20/2017 
 
 import rospy
 import numpy as np
@@ -14,7 +15,7 @@ class oculii_radar_interface():
     def __init__(self):
         self.frame_id = rospy.get_param('~frame_id','base_link')
         self.trackArray_subcriber = rospy.Subscriber('oculii_radar_trackArray', oculiiRadarTrackArray, self.recv_radar_tracks)
-        self.marker_publisher = rospy.Publisher('oculii_track_marker_2', MarkerArray, queue_size=1)
+        self.marker_publisher = rospy.Publisher('oculii_track_marker', MarkerArray, queue_size=10)
         #self.oculii_node = oculii_radar_driver()
 
     def recv_radar_tracks(self, track_array):
