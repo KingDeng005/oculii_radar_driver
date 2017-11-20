@@ -1,0 +1,54 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+.idea
+cmake-build-debug
+
+*~
+.hg
+*.swp
+*.swn
+*.swo
+*.bag
+*.log
+
+
+# large file
+data/
+models/
+*.npz
+GPSPoints.txt
+mid_land_points.txt
+
+*.pyc
+
+aws.credentials
+id_rsa
+secrets.tar
