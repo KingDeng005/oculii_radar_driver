@@ -15,7 +15,7 @@ class oculii_radar_interface():
     def __init__(self):
         self.frame_id = rospy.get_param('~frame_id','base_link')
         self.trackArray_subcriber = rospy.Subscriber('oculii_radar_trackArray', oculiiRadarTrackArray, self.recv_radar_tracks)
-        self.marker_publisher = rospy.Publisher('oculii_track_marker', MarkerArray, queue_size=10)
+        self.marker_publisher = rospy.Publisher('oculii_track_marker_2', MarkerArray, queue_size=10)
         #self.oculii_node = oculii_radar_driver()
 
     def recv_radar_tracks(self, track_array):
@@ -31,8 +31,8 @@ class oculii_radar_interface():
             marker.lifetime = rospy.Duration(1)
             marker.type = Marker.SPHERE
 
-            marker.pose.position.x = track.Z + 4
-            marker.pose.position.y = track.X + 0.2
+            marker.pose.position.x = track.Z + 2  
+            marker.pose.position.y = track.X - 2 
             marker.pose.position.z = 0
 
             delta = 0.02
